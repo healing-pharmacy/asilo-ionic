@@ -1,0 +1,39 @@
+.login-page {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #343434;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    
+  }
+  
+  .error-message {
+    color: red;
+  }
+  .login-title {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  .toolbar-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .login-icon {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  

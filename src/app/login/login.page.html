@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <img slot="start" alt="Icone do Asilo Arkhan" src="https://w0.peakpx.com/wallpaper/722/845/HD-wallpaper-bat-batman-black-cool-red.jpg" class="toolbar-icon" />
+    <ion-title>Asilo Arkhan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding login-page ion-text-center" class="ion-padding login-page" fullscreen>
+  <div class="login-container">
+    <ion-avatar>
+      <img alt="Icone" src="https://w7.pngwing.com/pngs/338/430/png-transparent-computer-icons-user-login-swiggy-blue-text-computer.png" class="login-icon" />
+    </ion-avatar>
+    <ion-title class="login-title">Login</ion-title>
+    <ion-item>
+      <ion-label position="floating">Usuário</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="login()">Entrar</ion-button>
+    <p class="error-message">{{ error }}</p>
+    <a routerLink="/register">Não tem conta? Cadastre-se aqui.</a>
+  </div>
+</ion-content>

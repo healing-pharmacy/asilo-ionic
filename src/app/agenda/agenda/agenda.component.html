@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-toolbar color="primary">
+    <ion-title>Tarefas cadastradas</ion-title>
+  </ion-toolbar>
+  <p>Agenda funcionando</p>
+  <app-agenda-list *ngIf="agendas$ | async as agendas; else loading"
+  [agendas]="agendas" >
+
+</app-agenda-list>
+ 
+
+  <ng-template #loading>
+    <div class="ion-spinner">
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+</ion-card>

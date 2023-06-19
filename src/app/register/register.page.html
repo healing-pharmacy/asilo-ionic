@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <img slot="start" alt="Icone do Asilo Arkhan" src="https://cdn-icons-png.flaticon.com/512/4561/4561054.png" class="toolbar-icon" />
+    <ion-title>Asilo Arkhan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding register-page ion-text-center" class="ion-padding register-page" fullscreen>
+  <div class="=register-container">  
+  <ion-title class="register-title">Cadastro</ion-title>
+  <ion-item>
+    <ion-label position="floating">Usuário</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="register()">Cadastrar</ion-button>
+  <p style="color: red">{{ error }}</p>
+  <a routerLink="/login">Já tem conta? Faça login aqui.</a>
+  </div>
+</ion-content>

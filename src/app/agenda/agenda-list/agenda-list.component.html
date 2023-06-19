@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-list>
+    <ion-card class="card-list" *ngFor="let agenda of agendas">
+      <ion-card-header>
+        <ion-card-title>{{ agenda.responsavel }}</ion-card-title>
+        <ion-card-subtitle>Small</ion-card-subtitle>
+        <ion-img [src]="'https://material.angular.io/assets/img/examples/shiba2.jpg'"></ion-img>
+      </ion-card-header>
+      <ion-card-content>
+        {{ agenda.tarefa }}
+      </ion-card-content>
+      <ion-card>
+        <ion-button expand="full">LIKE</ion-button>
+        <ion-button expand="full">SHARE</ion-button>
+      </ion-card>
+    </ion-card>
+  </ion-list>
+</ion-content>

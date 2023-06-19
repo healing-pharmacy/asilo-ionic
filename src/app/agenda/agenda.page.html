@@ -1,0 +1,64 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <img slot="start" alt="Icone do Asilo Arkhan" src="/src/assets/icon/batma-PhotoRoom.png-PhotoRoom.png" class="toolbar-icon"/>
+      <ion-title>Menu Arkhan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+  <ion-button expand="block">Agenda</ion-button>
+  <ion-button expand="block" (click)="paciente()">Pacientes</ion-button>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Asilo Arkhan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-datetime></ion-datetime>
+
+  <ion-list>
+    
+         
+    
+    <ion-card color="tertiary" *ngFor="let paciente of pacientes">
+      <ion-card-header>
+        <ion-card-title>{{paciente.nome}}</ion-card-title>
+        <ion-card-subtitle>Idade: {{paciente.idade}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>Observações: {{paciente.observacoes}}</p>
+        <p>Remédios: {{paciente.remedios}}</p>
+      </ion-card-content>
+    
+      <ion-button color="warning"  (click)="paciente">Informações</ion-button>
+      <ion-button color="success" >Concluido</ion-button>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Despertador</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Hora:</ion-label>
+          <ion-datetime display-format="HH:mm" [(ngModel)]="hora"></ion-datetime>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Data:</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="data"></ion-datetime>
+        </ion-item>
+    
+        <ion-button expand="full" (click)="definirDespertador()">Definir Despertador</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
