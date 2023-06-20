@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>agenda</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agenda</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +21,9 @@
 
   <ion-card-content>
     <p>Tarefa: {{ agenda.tarefa }}</p>
+    <p>Hora: {{ agenda.hora }}</p>
     <p>Data: {{agenda.dia}}/{{agenda.mes}}/{{agenda.ano}} </p>
+    <p>Concluido: {{agenda.concluido}}</p>
 
   </ion-card-content>
 </ion-card>
