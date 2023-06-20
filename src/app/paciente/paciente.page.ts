@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'; 
 import { PacienteService } from './paciente.service';
+import { PacienteDTO } from './model/paciente.dto';
 
 @Component({
   selector: 'app-paciente',
@@ -8,12 +9,15 @@ import { PacienteService } from './paciente.service';
 })
 export class PacientePage implements OnInit {
 
-  constructor(public pacienteService: PacienteService) { }
+  items: PacienteDTO[] = [];
 
+  constructor(public pacienteService: PacienteService) { }
+  
   ngOnInit() {
     this.pacienteService.findAll()
     .subscribe(response => {
-      console.log(response);
+      this.items = response;
+      //console.log(response);
     }, 
     error => {
       console.log(error);
