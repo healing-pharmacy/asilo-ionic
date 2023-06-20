@@ -1,3 +1,4 @@
+import { AgendaService } from './../service/agenda.service';
 import { Observable } from 'rxjs';
 import { Agenda } from './../model/agenda';
 import { Component, OnInit } from '@angular/core';
@@ -9,17 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agenda.page.scss'],
 })
 export class AgendaPage implements OnInit {
-  cards = [
-    { title: 'Card 1', subtitle: 'Subtitle 1', content: 'Content 1' },
-    { title: 'Card 2', subtitle: 'Subtitle 2', content: 'Content 2' },
-    { title: 'Card 3', subtitle: 'Subtitle 3', content: 'Content 3' }
-  ];
 
-  constructor() {
+  agendas: Agenda[] = []
+
+
+  constructor(private agendaService: AgendaService) {
 
    }
 
   ngOnInit() {
+    this.loadAgendas();
   }
+
+  loadAgendas() {
+    this.agendaService.list().subscribe(
+      (response) => {
+        this.agendas = response; // Armazena as agendas recebidas na variável agendas
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
 
 }
