@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AgendaService {
 
-  private readonly API = `${environment.urlApi}api/agendas`
+  private readonly API = `${environment.api}/agendas`
 
   constructor(private httpClient : HttpClient) { }
 

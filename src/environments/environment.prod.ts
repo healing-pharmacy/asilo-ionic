@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  urlApi: "http://192.168.1.117:8081/"
+  urlApi: "http://lolcalhost:8081/api"
 };
